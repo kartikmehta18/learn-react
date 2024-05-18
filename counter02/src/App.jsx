@@ -4,7 +4,8 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  let [counter,setCounter]=useState(15)
+  let [counter,setCounter]=useState(7)  // it is a hooks so if apan hooks use kar te he to passed value jaha bhi place
+  // kare ge to vo direct ui me update ho ga so isse DOM use nahi kar na pade ga
 
 //let counter=15;
 
