@@ -1,34 +1,44 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+// function Random(){
+//  const n=Math.floor(Math.random()*1677215);
+//  const rn= "#"+n;
+//  console.log(rn);
+//  navigator.clipboard.writeText(rn);
+// }
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [color, setColor] = useState("olive")
+  const n=Math.floor(Math.random()*1677215);
+ const rn= "#"+n;
+ const rrn=navigator.clipboard.writeText(rn);
+//  alert("color copied to clipboard");
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+         <div className="w-full h-screen duration-200"
+         
+      style={{backgroundColor: color}}>
+          <div className=' fixed flex flex-wrap justify-center top-12 inset-x-0 px-2 text-white text-7xl'>{rn}</div>
+        <div className="fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2">
+        
+          <div className="fixed flex flex-wrap justify-center bg-white shadow-lg px-3 py-2 rounded-full">
+            <button onClick={()=> setColor("orange")}
+            className="mr-2 outline-none px-4 rounded-full bg-orange-600 text-white drop-shadow-lg">Orange</button>
+            <button onClick={()=> setColor("red")}
+            className="mr-2 outline-none px-4 rounded-full bg-red-600 text-white drop-shadow-lg">Red</button>
+            <button onClick={()=> setColor("yellow")}
+            className="mr-2 outline-none px-4 rounded-full bg-yellow-400 text-white drop-shadow-lg">Yellow</button>
+            <button onClick={()=> setColor("black")}
+            className="mr-2 outline-none px-4 rounded-full bg-black text-white drop-shadow-lg">Black</button>
+            <button onClick={()=> setColor("green")}
+            className="mr-2 outline-none px-4 rounded-full bg-green-600 text-white drop-shadow-lg">Green</button>
+             <button onClick={()=> setColor(rn)}
+            className="mr-2 outline-none px-4 rounded-full  text-white drop-shadow-lg"   style={{backgroundColor: color}}>Random-Color</button>
+            </div>
+            
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
   )
 }
 
