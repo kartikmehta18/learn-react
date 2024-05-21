@@ -37,7 +37,7 @@ function App() {
             className="mr-2 outline-none px-4 rounded-full bg-black text-white drop-shadow-lg">Black</button>
             <button onClick={()=> setColor("green")}
             className="mr-2 outline-none px-4 rounded-full bg-green-600 text-white drop-shadow-lg">Green</button>
-             <button onClick={()=> setColor(rn)}
+            <button onClick={()=> setColor(rn)}
             className="mr-2 outline-none px-4 rounded-full  text-white drop-shadow-lg"   style={{backgroundColor: color}}>Random-Color</button>
             </div>
             
