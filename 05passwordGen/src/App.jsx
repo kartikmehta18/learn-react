@@ -30,6 +30,7 @@ function App() {
 
   const copyPasswordToClipboard =useCallback(()=>{
     passwordRef.current?.select();
+    // passwordRef.current?.setSelectionRange(0,4);  only for selecting the first 4 characters
 
     window.navigator.clipboard.writeText(password);
   },[password]
@@ -55,7 +56,7 @@ useEffect(()=>{  passwordGenerator();
         readOnly
         ref={passwordRef}
         />
-        <button onClick={copyPasswordToClipboard}className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>Copy</button>
+        <button onClick={copyPasswordToClipboard}className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0 hover:bg-black'>Copy</button>
       </div>
       <div className='flex text-sm gap-x-2'>
         <div className='flex items-center gap-x-1'>
@@ -89,7 +90,8 @@ useEffect(()=>{  passwordGenerator();
         </div>
       </div>
       </div>
-
+      <div className=' fixed flex flex-wrap justify-center top-15 inset-x-0'><img src="https://readme-typing-svg.demolab.com?font=Poppins&duration=5000&pause=500&color=F7F7F7&random=false&width=400&lines=Hey+This+is+Random+Password+Generator" alt="Typing SVG" />
+          </div>
      
     </>
   )
