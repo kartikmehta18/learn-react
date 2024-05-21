@@ -19,7 +19,7 @@ function App() {
          <div className="w-full h-screen duration-200"
          
       style={{backgroundColor: color}}>
-          <div className=' fixed flex flex-wrap justify-center top-12 inset-x-0 px-2 text-white text-7xl'>{rn}
+          <div className=' fixed flex flex-wrap justify-center top-12 inset-x-0 px-2 text-white text-7xl'>{color||rn}
           </div>
           <div className=' fixed flex flex-wrap justify-center top-15 inset-x-0'><img src="https://readme-typing-svg.demolab.com?font=Poppins&duration=1000&pause=500&color=F7F7F7&random=false&width=370&lines=Hey+This+is+Random+Color+Generator" alt="Typing SVG" />
           </div>
