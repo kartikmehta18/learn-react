@@ -2,6 +2,7 @@ import { useState ,useCallback, useEffect, useRef} from 'react'
 import './App.css'
 
 
+
 function App() {
   const [length, setLength] = useState(8);
   const [number , setNumber]= useState(false);
@@ -20,7 +21,7 @@ function App() {
     if(char) str+="!@#$%^&*()_+*/?><";
 
     for(let i=1;i<=length;i++){
-     let char =Math.floor(Math.random()*str.length+1)
+     let char =Math.floor(Math.random()*str.length+1);
      pass +=str.charAt(char);
     }
     setPassword(pass);
@@ -90,9 +91,6 @@ useEffect(()=>{  passwordGenerator();
         </div>
       </div>
       </div>
-      <div className=' fixed flex flex-wrap justify-center top-15 inset-x-0'><img src="https://readme-typing-svg.demolab.com?font=Poppins&duration=5000&pause=500&color=F7F7F7&random=false&width=400&lines=Hey+This+is+Random+Password+Generator" alt="Typing SVG" />
-          </div>
-     
     </>
   )
 }
