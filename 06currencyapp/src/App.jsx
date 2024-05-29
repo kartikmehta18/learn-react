@@ -29,7 +29,7 @@ function App() {
     const convert = (e) => {
         e.preventDefault();
         if (currencyInfo[to]) {
-            setConvertedAmount(amount * currencyInfo[to]);
+            setConvertedAmount(amount *currencyInfo[to]);
         }
     };
 
