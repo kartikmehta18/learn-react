@@ -1,6 +1,6 @@
 
 
-export function Plan() {
+export function Plan () {
   return (
     <section className="relative overflow-hidden py-10">
       <div className="relative mx-auto max-w-7xl px-4">

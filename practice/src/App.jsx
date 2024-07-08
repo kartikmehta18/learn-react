@@ -3,7 +3,7 @@
 import Nav from './Nav';
 import Hero from './Hero';
 import Features from './Features';
-import Plan  from './Plan';
+import { Plan } from './Plan';
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
     <Nav />
    <Hero />
    <Features />
-   <Plan />
+    <Plan />
    
     </>
   )
