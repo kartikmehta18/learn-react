@@ -43,7 +43,7 @@ const menuItems = [
               />
             </svg>
           </span>
-          <span className="font-bold">DevUI</span>
+          <span className="font-bold">Dev</span>
         </div>
         <div className="hidden lg:block">
           <ul className="inline-flex space-x-8">
