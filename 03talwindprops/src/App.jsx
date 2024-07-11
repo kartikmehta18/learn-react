@@ -31,7 +31,7 @@ function App() {
       </div>
     </figcaption>
   </div>
-</figure> */}
+</figure> */} 
   
     <Card username="Leena Mehta" btntxt="socials" lnk="https://www.pexels.com/discover/people-photography/" />    {/*in this card we want to add multiple values and images so we use props (in whic we got value through arry)is calles props */}
     <Card username="kartik mehta" btntxt="socials" lnk="https://github.com/kartikmehta18"/>    {/* passing values is props */}
