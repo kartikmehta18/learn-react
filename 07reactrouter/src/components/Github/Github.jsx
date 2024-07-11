@@ -1,4 +1,6 @@
-import React, { useEffect ,useState } from 'react'
+import { useEffect ,useState } from 'react'
+// import { useLoaderData } from 'react-router-dom';
+
 
 function Github() {
     const [data , setData] =useState([])
@@ -10,6 +12,7 @@ function Github() {
             setData(data)
      })
     },[])
+    // const data =useLoaderData()
   return (
     <div className='flex items-center justify-center  text-center text-3xl '>
       Github Follwers:{data.followers}<br></br>
@@ -21,3 +24,8 @@ function Github() {
 }
 
 export default Github ;
+// export const githubInfoLoader = async ()=>{
+//     const res = await fetch('https://api.github.com/users/kartikmehta18')
+//     const data = await res.json()
+//     return data
+// }
