@@ -9,8 +9,8 @@ const menuItems = [
     href: '/',
   },
   {
-    name: 'About',
-    href: 'about',
+    name: 'Features',
+    href: 'features',
   },
   {
     name: 'Plan',
