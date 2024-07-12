@@ -1,6 +1,6 @@
 
 
-export function Team() {
+export function Team(props) {
   return (
     <div className="mx-auto max-w-7xl px-2 md:px-0">
       <div className="my-4">
@@ -25,7 +25,7 @@ export function Team() {
               className="z-0 h-full w-full rounded-[10px] object-cover"
             />
             <div className="absolute bottom-4 left-4">
-              <h1 className="text-xl font-semibold text-white">John Doe</h1>
+              <h1 className="text-xl font-semibold text-white">{props.name1}</h1>
               <h6 className="text-base text-white">Frontend Developer</h6>
             </div>
           </div>
@@ -45,7 +45,7 @@ export function Team() {
               className="z-0 h-full w-full rounded-[10px] object-cover"
             />
             <div className="absolute bottom-4 left-4">
-              <h1 className="text-xl font-semibold text-white">Mark Cook</h1>
+              <h1 className="text-xl font-semibold text-white">{props.name2}</h1>
               <h6 className="text-base text-white">Backend Developer</h6>
             </div>
           </div>
@@ -65,7 +65,7 @@ export function Team() {
               className="z-0 h-full w-full rounded-[10px] object-cover"
             />
             <div className="absolute bottom-4 left-4">
-              <h1 className="text-xl font-semibold text-white">Ketty</h1>
+              <h1 className="text-xl font-semibold text-white">{props.name3}</h1>
               <h6 className="text-base text-white">Designer</h6>
             </div>
           </div>
