@@ -1,6 +1,6 @@
 
 
-export function TeamsTwo() {
+export function Team() {
   return (
     <div className="mx-auto max-w-7xl px-2 md:px-0">
       <div className="my-4">
