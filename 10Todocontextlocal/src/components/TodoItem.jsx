@@ -1,9 +1,21 @@
+import { useState } from "react";
 import { useTodo } from "../contexts";
 
 
-
 function TodoItem({ todo }) {
-    const {updateTodo, deleteTodo, toggleCompleted} =useTodo
+    const [ isTodoEditable,setIsTodoEditable ] = useState(false)
+    const [todoMsg, setTodoMsg]= useState(todo.todo)
+    const {updateTodo , deleteTodo, toggleComplete } =useTodo()
+
+    const editTodo = () =>{
+        updateTodo(todo.id,{...todo, toto: todoMsg})
+        setIsTodoEditable(false);
+    }
+    const toggleCompleted = () =>{
+        toggleComplete(todo.id)
+    }
+
+
 
     return (
         <div
