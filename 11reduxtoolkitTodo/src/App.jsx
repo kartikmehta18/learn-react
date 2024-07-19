@@ -1,5 +1,6 @@
 
-import './App.css'
+import AddTodo from './components/AddTodo'
+import Todo from './components/Todo'
 
 function App() {
  
@@ -7,6 +8,8 @@ function App() {
   return (
     <>
     <h1>Learn Redux</h1>
+    <AddTodo />
+    <Todo />
     </>
   )
 }

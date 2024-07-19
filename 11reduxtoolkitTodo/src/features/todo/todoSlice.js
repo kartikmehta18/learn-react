@@ -2,7 +2,7 @@ import { createSlice , nanoid } from "@reduxjs/toolkit";
 
 
 const initialState = {
-    todos:[{id:1, text: "HELLO"}]
+    todos:[{}]
 }
 
 export const todoSlice = createSlice({
@@ -18,6 +18,17 @@ export const todoSlice = createSlice({
         },
         removeTodo: (state, action) =>{
             state.todos = state.todos.filter((todo) => todo.id != action.payload)
+            
+    // useEffect(() => {
+    //   const input =JSON.parse(localStorage.getItem("input"))
+     
+    //    if(input && input.length >0 ){
+    //     setInput(input);
+    //    }
+    //  }, [])
+    //  useEffect(() =>{
+    //    localStorage.setItem("input", JSON.stringify(input));
+    //  },[input])
         },
     }
 })

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState ,useEffect } from "react"
 import {useDispatch} from "react-redux"
 import {addTodo} from "../features/todo/todoSlice"
 
@@ -12,6 +12,16 @@ function AddTodo() {
         dispatch(addTodo(input))
         setInput('')
     }
+    // useEffect(() => {
+    //   const input =JSON.parse(localStorage.getItem("input"))
+     
+    //    if(input && input.length >0 ){
+    //     setInput(input);
+    //    }
+    //  }, [])
+    //  useEffect(() =>{
+    //    localStorage.setItem("input", JSON.stringify(input));
+    //  },[input])
 
   return (
     <form onSubmit={addTodoHandler} className="space-x-3 mt-12">
