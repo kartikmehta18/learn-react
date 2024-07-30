@@ -1,5 +1,5 @@
 import Card from './components/card'
-import { useState } from 'react'
+
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
@@ -22,7 +22,7 @@ function App() {
         and the build size is tiny.”
       </p>
     </blockquote>
-    <figcaption className="font-medium">
+    <figcaption className="font-medium">12`+65'
       <div className="text-sky-500 dark:text-sky-400">
         Sarah Dayan
       </div>
