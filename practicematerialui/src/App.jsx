@@ -1,55 +1,18 @@
-import { makeStyles } from "@mui/material";
 
-const useStyles = makeStyles((theme) => ({}));
+import './App.css';
+import Button from '@mui/material/Button';
+import AccessibilityTwoToneIcon from '@mui/icons-material/AccessibilityTwoTone';
+import Navbar from './components/Navbar';
 
-const Navbar =() =>{
-    const classes =useStyles();
-    return(
-        <div>
-            <h1>Navbar</h1>
-        </div>
-    )
-};
-export default Navbar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import './App.css';
-// import Button from '@mui/material/Button';
-// import AccessibilityTwoToneIcon from '@mui/icons-material/AccessibilityTwoTone';
-// function App() {
+function App() {
  
-//   return (
-//     <div>
-//       <Button  variant='contained'
-//       style={{backgroundColor: 'red'}}
-//       startIcon={<AccessibilityTwoToneIcon />} >Material-UI</Button>
-//     </div>
-//   );
-// }
+  return (
+    <div>
+      
+      <Navbar />
+      
+    </div>
+  );
+}
 
-// export default App;
+export default App;
