@@ -1,9 +1,36 @@
-import { AppBar,  Toolbar, Typography} from "@mui/material";
+import { AppBar,
+      InputBase,
+      Toolbar,
+      Typography, 
+      alpha, 
+      Badge,
+      } from "@mui/material";
 import { makeStyles } from 'tss-react/mui';
 import Search from '@mui/icons-material/Search';
-
+import Mail from '@mui/icons-material/Mail';
+import Notifications from '@mui/icons-material/Notifications';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import Avatar from '@mui/material/Avatar';
 
 const useStyles = makeStyles()((theme) => ({
+    toolbar:{
+        display: 'flex',
+        justifyContent: 'space-between',
+
+    },
+    search:{
+        display: 'flex',
+        alignItems: 'center',
+        borderRadius: theme.shape.borderRadius,
+          backgroundColor: alpha(theme.palette.common.white, 0.15),
+  '&:hover': {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    },
+    borderRadius: theme.shape.borderRadius,
+    width: '40%',
+    [theme.breakpoints.down('sm')]:{
+        display: "none"},
+    },
     logoLg:{
         display: 'none',
         [theme.breakpoints.up('sm')]:{
@@ -14,19 +41,42 @@ const useStyles = makeStyles()((theme) => ({
         display: 'block',
         [theme.breakpoints.up('lg')]:{
             display: 'none',
-        } ,
+        },
     },
+    input:{
+        color: 'white',
+        marginLeft: theme.spacing(1),
+    },
+    icons:{
+        display: 'flex',
+        alignItems: 'center',
+    },
+    badge:{
+        marginRight: theme.spacing(2),
+    },
+    
 }));
 
 const Navbar =() =>{
     const {classes} = useStyles();
     return(
             <AppBar>
-            <Toolbar>
+            <Toolbar className={classes.toolbar}>
                 <Typography variant="h6" className={classes.logoLg} >kartik-Dev</Typography>
                 <Typography variant="h6" className={classes.logoSm} >kartik</Typography>
                 <div className={classes.search}>
                     <Search />
+                    <InputBase placeholder="Search..." className={classes.input}/>
+                </div>
+                <div className={classes.icons}>
+                <Search className={classes.searchbutton} />
+        <Badge badgeContent={11} color="error" className={classes.badge}>
+            <Mail />
+        </Badge>
+        <Badge badgeContent={17} color="error" className={classes.badge}>
+            <Notifications />
+        </Badge>
+        <Avatar alt="Remy Sharp" src="https://avatars.githubusercontent.com/u/125860170?s=400&u=7b1b1e3bb4cbbf9a36712f8a4d242d98fd12719e&v=4"  />
                 </div>
             </Toolbar>
             </AppBar>
