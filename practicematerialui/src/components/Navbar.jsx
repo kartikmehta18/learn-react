@@ -9,8 +9,8 @@ import { makeStyles } from 'tss-react/mui';
 import Search from '@mui/icons-material/Search';
 import Mail from '@mui/icons-material/Mail';
 import Notifications from '@mui/icons-material/Notifications';
-import AccountCircle from '@mui/icons-material/AccountCircle';
 import Avatar from '@mui/material/Avatar';
+import { useState } from "react";
 
 const useStyles = makeStyles()((theme) => ({
     toolbar:{
@@ -18,19 +18,33 @@ const useStyles = makeStyles()((theme) => ({
         justifyContent: 'space-between',
 
     },
-    search:{
-        display: 'flex',
-        alignItems: 'center',
+    search: {
+        display: "flex",
+        alignItems: "center",
+        backgroundColor: alpha(theme.palette.common.white, 0.15),
+        "&:hover": {
+          backgroundColor: alpha(theme.palette.common.white, 0.25),
+        },
         borderRadius: theme.shape.borderRadius,
-          backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+        width: "50%",
+        [theme.breakpoints.down("sm")]: {
+          display: (props) => (props.open ? "flex" : "none"),
+          width: "70%",
+        },
+      },
+
+    searchbutton:{
+        marginRight: theme.spacing(2),
+        [theme.breakpoints.up('sm')]:{
+            display: 'none',
+        },
+
     },
-    borderRadius: theme.shape.borderRadius,
-    width: '40%',
-    [theme.breakpoints.down('sm')]:{
-        display: "none"},
-    },
+    cancel: {
+        [theme.breakpoints.up("sm")]: {
+          display: "none",
+        },
+      },
     logoLg:{
         display: 'none',
         [theme.breakpoints.up('sm')]:{
@@ -48,8 +62,9 @@ const useStyles = makeStyles()((theme) => ({
         marginLeft: theme.spacing(1),
     },
     icons:{
-        display: 'flex',
         alignItems: 'center',
+        display: 'flex',
+        
     },
     badge:{
         marginRight: theme.spacing(2),
@@ -58,7 +73,8 @@ const useStyles = makeStyles()((theme) => ({
 }));
 
 const Navbar =() =>{
-    const {classes} = useStyles();
+    const [open, setOpen] = useState(false);
+    const {classes} = useStyles({open});
     return(
             <AppBar>
             <Toolbar className={classes.toolbar}>
@@ -67,9 +83,10 @@ const Navbar =() =>{
                 <div className={classes.search}>
                     <Search />
                     <InputBase placeholder="Search..." className={classes.input}/>
+                    {/* <Cancel className={classes.cancel} onClick={() => setOpen(false)} /> */}
                 </div>
                 <div className={classes.icons}>
-                <Search className={classes.searchbutton} />
+                {/* <Search className={classes.searchbutton} onClick={() =>setOpen(true)} /> */}
         <Badge badgeContent={11} color="error" className={classes.badge}>
             <Mail />
         </Badge>
