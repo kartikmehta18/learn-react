@@ -29,7 +29,7 @@ import User from './components/User/User'
 //     ]
 //   }
 // ])
-
+// another method
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
